@@ -1,0 +1,78 @@
+html,
+body {
+	height: 100%;
+}
+body{
+	
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 27px;
+	font-family: 'Open Sans', sans-serif;
+	color:$default;
+	
+}
+
+// оборачиваем им все
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+// прижатый футер
+.footer {
+	flex: 0 0 auto;
+}
+
+.container{
+max-width: 1140px;
+margin: 0 auto;
+padding: 0 15px;
+}
+
+.container-fluid{
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0 10px;
+
+}
+
+
+.slick-dots{
+margin-top: 295px;
+margin-left: 56px;
+
+}
+
+.slick-dots--contact{
+	margin-left: 0;
+margin-top: 35px;
+display: flex;
+justify-content: center;
+
+
+}
+
+
+.info-email{
+	position: relative;
+	font-weight: 600;
+	font-size: 14px;
+	color: $title;
+	margin-bottom: 22px;
+	padding-left: 30px;
+	// margin не работает на ссылки делаем его строчно блочным
+	display:inline-block;
+	&::before{
+		content:'';
+		background-image: url(../images/envelope.svg);
+		top: 8px;
+		left: 0;
+		width: 16px;
+		height: 12px;
+		position: absolute;
+	}
+}
